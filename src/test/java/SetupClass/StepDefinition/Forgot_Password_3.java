@@ -46,7 +46,7 @@ public class Forgot_Password_3 extends SetupClass {
 
 	@Then("^user enter email iii$")
 	public void user_enter_email_iii() throws Throwable {
-		 WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.id("jform_email")));
+		 WebElement new_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='jform_email']")));
 		 Thread.sleep(3000);
 		 new_email.sendKeys("himanshi.sharma+geeks@slidetech.in");
 		 Thread.sleep(3000);
