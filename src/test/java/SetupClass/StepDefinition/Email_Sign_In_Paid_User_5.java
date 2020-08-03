@@ -60,7 +60,7 @@ public class Email_Sign_In_Paid_User_5 extends SetupClass {
 		driver.get("https://www.slidegeeks.com/abstract/product/business-diagram-thumbs-up-hand-icons-for-services-marketing-presentation-template");
 		Thread.sleep(2000);
 		 
-		 WebElement download_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".product-cart-button-sec > form:nth-child(1) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > a:nth-child(1)")));
+		 WebElement download_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
 		 Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
