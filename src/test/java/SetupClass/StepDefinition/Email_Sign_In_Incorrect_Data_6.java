@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.Then;
 public class Email_Sign_In_Incorrect_Data_6 extends SetupClass {
 	
 	WebDriverWait wait = new WebDriverWait(driver,30);
+	  JavascriptExecutor js = (JavascriptExecutor) driver;
 	
 	@Given("^user is already on Home Page of Geeks Website vi$")
 	public void user_is_already_on_Home_Page_of_Geeks_Website_vi() throws Throwable {
@@ -37,8 +39,9 @@ public class Email_Sign_In_Incorrect_Data_6 extends SetupClass {
 	@Then("^user login to website with invalid email and password vi$")
 	public void user_login_to_website_with_invalid_email_and_password_vi() throws Throwable {
 		
-		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
+		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='pg-account-action']/div/div[2]/div/div[2]/form/div[1]/span/input")));
 		 Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",login_email);
 		 login_email.sendKeys("hkjfujsid@hsujrf.hjsdgf");
 		 Thread.sleep(3000);
 		 
