@@ -25,7 +25,7 @@ public class Email_Sign_In_Paid_User_5 extends SetupClass {
 
 	@Then("^user navigates to login page v$")
 	public void user_navigates_to_login_page_v() throws Throwable {
-		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+		WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
@@ -33,20 +33,18 @@ public class Email_Sign_In_Paid_User_5 extends SetupClass {
 
 	@Then("^user login to website v$")
 	public void user_login_to_website_v() throws Throwable {
-		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-login-form-username > input:nth-child(1)")));
-		 Thread.sleep(3000);
-		 login_email.sendKeys("himanshi.sharma+pgeeks@slidetech.in");
-		 Thread.sleep(3000);
-		 
-		 WebElement login_password = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("span.pg-login-form-password > input:nth-child(1)")));
-		 Thread.sleep(3000);
-		login_password.sendKeys("123456");
-		 Thread.sleep(3000);
-		 
-		 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-button-login")));
-		 Thread.sleep(3000);
-		 login_btn.click();
-		 Thread.sleep(3000);
+		 driver.get("https://www.slidegeeks.com/account");
+	       Thread.sleep(5000);
+	       
+	        WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div[2]/div/div/div[2]/div/form/div[1]/input")));
+               old_paid_email.sendKeys("sakshi.pathania@slidetech.in");
+          Thread.sleep(3000);
+               WebElement old_paid_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div[2]/div/div/div[2]/div/form/div[2]/input")));
+               old_paid_pass.sendKeys("Qwerty@1");
+	       
+	       Thread.sleep(3000);
+	       WebElement old_paid_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div.btn-wrapper.login_btn > input")));
+	       old_paid_login_btn.click();
 	}
 
 	@Then("^user is redirected my dashboard page v$")
