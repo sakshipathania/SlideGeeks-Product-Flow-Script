@@ -52,6 +52,7 @@ public class Facebook_existing_user_sign_in_6 extends SetupClass {
 		     driver.switchTo().window(popupWindowHandle);
 			   driver.manage().window().maximize();
 		   }
+		  }
 	       Thread.sleep(5000);
 	       
 	        WebElement fb_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[2]/div[1]/form/div/div[1]/div/input")));
