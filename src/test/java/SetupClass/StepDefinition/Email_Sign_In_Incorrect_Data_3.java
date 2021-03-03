@@ -68,7 +68,13 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	@Then("^user login to website with valid email and password vi$")
 	public void user_login_to_website_with_valid_email_and_password_vi() throws Throwable {
 		
-		Thread.sleep(3000);
+		
+		WebElement login_signin_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a")));
+		 Thread.sleep(3000);
+		 login_signin_btn1.click();
+		 Thread.sleep(5000);
+		
+		
 		WebElement old_paid_email1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div[2]/div/div/div[2]/div/form/div[1]/input")));
                old_paid_email1.sendKeys("sakshi.pathania@slidetech.in");
           Thread.sleep(3000);
