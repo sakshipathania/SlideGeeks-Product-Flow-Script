@@ -16,8 +16,8 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	@Given("^user is already on Home Page of Geeks Website viii$")
-	public void user_is_already_on_Home_Page_of_Geeks_Website_viii() throws Throwable {
+	@Given("^user is already on Home Page of Geeks Website vii$")
+	public void user_is_already_on_Home_Page_of_Geeks_Website_vii() throws Throwable {
 		
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
@@ -25,16 +25,16 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 	    
 	}
 
-	@Then("^user navigates to fb login page viii$")
-	public void user_navigates_to_login_page_viii() throws Throwable {
+	@Then("^user navigates to fb login page vii$")
+	public void user_navigates_to_login_page_vii() throws Throwable {
 		WebElement fb_login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facebook-signin-btn > i")));
 		 Thread.sleep(3000);
 		 fb_login_btn.click();
 		 Thread.sleep(3000);
 	}
 
-	@Then("^user login to website viii$")
-	public void user_login_to_website_viii() throws Throwable {
+	@Then("^user login to website vii$")
+	public void user_login_to_website_vii() throws Throwable {
 		
       driver.manage().window().maximize();
 		
@@ -72,13 +72,13 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 		  driver.switchTo().window(currentWindow);
 	}
 
-	@Then("^user is redirected my dashboard page viii$")
-	public void user_is_redirected_my_dashboard_page_viii() throws Throwable {
+	@Then("^user is redirected my dashboard page vii$")
+	public void user_is_redirected_my_dashboard_page_vii() throws Throwable {
 		log.info("Hey, I am on Pricing");
 	}
 
-	@Then("^user download a free product viii$")
-	public void user_download_a_free_product_viii() throws Throwable {
+	@Then("^user download a free product vii$")
+	public void user_download_a_free_product_vii() throws Throwable {
 		
 		driver.get("https://www.slidegeeks.com/free-downloads");
 		Thread.sleep(6000);
@@ -93,8 +93,8 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 		 
 	    	}
 
-	@Then("^user signout of website viii$")
-	public void user_signout_of_website_viii() throws Throwable {
+	@Then("^user signout of website vii$")
+	public void user_signout_of_website_vii() throws Throwable {
 
 		// Log out
 				/* WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.signin-page-wrapper.main-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
