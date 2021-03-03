@@ -3,7 +3,7 @@ package SetupClass.StepDefinition;
 import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 
-public class facebook_logout extends Set {
+public class facebook_logout extends SetupClass {
 	
 
 @Given("^navigate to the facebook url\\.$")
