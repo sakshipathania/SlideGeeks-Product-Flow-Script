@@ -27,7 +27,7 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 
 	@Then("^user navigates to sign up page i$")
 	public void user_navigates_to_sign_up_page_i() throws Throwable {
-		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+		 WebElement login_signup_btn = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[2]/a")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
@@ -62,7 +62,7 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 		 captcha.sendKeys("12345");
 		 Thread.sleep(3000);
 			 
-		 WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
+		 WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#member-registration > div.control.icheckbox-box > div.btn-wrapper.login_btn > a")));
 		 Thread.sleep(3000);
 		 register_btn.click();
 		 Thread.sleep(3000);
@@ -165,7 +165,7 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 	@Then("^user click on register button to complete sign up i$")
 	public void user_click_on_register_button_to_complete_sign_up_i() throws Throwable {
 		
-		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
+		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#member-registration > div.control.icheckbox-box > div.btn-wrapper.login_btn > a")));
 		 Thread.sleep(3000);
 		register_btn.click();
 		 Thread.sleep(5000);
@@ -174,7 +174,7 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 		 try
 		 {
 			// Log out
-			 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+			 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.product-page-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
 			 Thread.sleep(3000);
 			 login_btn.click();
 			 Thread.sleep(3000);
