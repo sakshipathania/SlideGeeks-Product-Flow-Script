@@ -29,10 +29,12 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 	@Then("^user navigates to sign up page ii$")
 	public void user_navigates_to_sign_up_page_ii() throws Throwable {
 		
-		 WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+		/* WebElement login_signup_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
-		 Thread.sleep(3000);
+		 Thread.sleep(3000);*/
+		driver.get("https://www.slidegeeks.com/register");
+		Thread.sleep(3000);
 	   
 	}
 
@@ -110,6 +112,17 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		register_btn.click();
 		 Thread.sleep(5000);
 		 
+		driver.get("https://www.slidegeeks.com/free-downloads");
+		Thread.sleep(6000);
+		
+		WebElement Download= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/section[2]/div/div/div[1]/div/div[2]/div[1]/div/div/p/a/span"));
+		
+		//WebElement Download = (WebElement)js.executeScript("('a.btn-download')", "");
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",Download);
+		Download.click();
+		Thread.sleep(3000);
+		
 		 try
 		 {
 			// Log out
