@@ -55,10 +55,10 @@ public class Email_Sign_In_Paid_User_5 extends SetupClass {
 	@Then("^user download a paid product v$")
 	public void user_download_a_paid_product_v() throws Throwable {
 		
-		driver.get("https://www.slidegeeks.com/abstract/product/business-diagram-thumbs-up-hand-icons-for-services-marketing-presentation-template");
-		Thread.sleep(2000);
+		driver.get("https://www.slidegeeks.com/business/product/up-skilling-vector-with-progress-in-content-writing-ppt-powerpoint-presentation-styles-professional-pdf");
+		Thread.sleep(5000);
 		 
-		 WebElement download_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[contains(.,'Download this Presentation')])[2]"))); 
+		 WebElement download_btn = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
 		 Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
@@ -69,7 +69,7 @@ public class Email_Sign_In_Paid_User_5 extends SetupClass {
 	public void user_signout_of_website_v() throws Throwable {
 
 		// Log out
-				 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
+				 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.signin-page-wrapper.main-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
 				 Thread.sleep(3000);
 				 login_btn.click();
 				 Thread.sleep(3000);
