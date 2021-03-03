@@ -33,8 +33,8 @@ public class Email_Sign_In_Free_User_4 extends SetupClass {
 	@Then("^user login to website iv$")
 	public void user_login_to_website_iv() throws Throwable {
 		
-		driver.get("https://www.slidegeeks.com/account");
-	       Thread.sleep(5000);
+		//driver.get("https://www.slidegeeks.com/account");
+	    //   Thread.sleep(5000);
 	       
 	        WebElement old_paid_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div[2]/div/div/div[2]/div/form/div[1]/input")));
                old_paid_email.sendKeys("Slidegeekstesting1@gmail.com");
