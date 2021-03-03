@@ -1,4 +1,4 @@
-package SetupClass.TestStep;
+package SetupClass.StepDefinition;
 
 import SetupClass.Set;
 import cucumber.api.java.en.Given;
