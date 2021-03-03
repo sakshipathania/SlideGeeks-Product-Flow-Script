@@ -62,7 +62,7 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 		 captcha.sendKeys("12345");
 		 Thread.sleep(3000);
 			 
-		 WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#member-registration > div.control.icheckbox-box > div.btn-wrapper.login_btn > a")));
+		 WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		 Thread.sleep(3000);
 		 register_btn.click();
 		 Thread.sleep(3000);
@@ -165,11 +165,21 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 	@Then("^user click on register button to complete sign up i$")
 	public void user_click_on_register_button_to_complete_sign_up_i() throws Throwable {
 		
-		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#member-registration > div.control.icheckbox-box > div.btn-wrapper.login_btn > a")));
+		WebElement register_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".pg-register-button-new")));
 		 Thread.sleep(3000);
 		register_btn.click();
 		 Thread.sleep(5000);
 	  
+		driver.get("https://www.slidegeeks.com/free-downloads");
+		Thread.sleep(6000);
+		
+		WebElement Download= driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/section[2]/div/div/div[1]/div/div[2]/div[1]/div/div/p/a/span"));
+		
+		//WebElement Download = (WebElement)js.executeScript("('a.btn-download')", "");
+		Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",Download);
+		Download.click();
+		Thread.sleep(3000);
 		 
 		 try
 		 {
