@@ -17,7 +17,7 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
 	
-	@Given("^user is already on Home Page of Geeks Websiteiii$")
+	@Given("^user is already on Home Page of Geeks Website iii$")
 	public void user_is_already_on_Home_Page_of_Geeks_Website_iii() throws Throwable {
 	   
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
