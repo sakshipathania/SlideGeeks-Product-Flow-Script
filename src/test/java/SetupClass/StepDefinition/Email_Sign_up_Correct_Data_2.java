@@ -124,7 +124,7 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 		Download.click();
 		Thread.sleep(3000);
 		
-		 try
+		/* try
 		 {
 			// Log out
 			 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".t3-navbar > ul:nth-child(1) > li:nth-child(10) > a:nth-child(1)")));
@@ -138,7 +138,10 @@ public class Email_Sign_up_Correct_Data_2 extends SetupClass {
 			// TODO: handle exception
 			 
 			 Thread.sleep(1000);
-		}
+		}*/
+		 WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+		Thread.sleep(3000);
+		Signout.click();
 	    
 	}
 
