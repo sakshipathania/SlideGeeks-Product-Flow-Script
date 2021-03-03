@@ -86,6 +86,10 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 		 Thread.sleep(3000);
 		 download_btn1.click();
 		 Thread.sleep(3000);
+		
+		 WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+		Thread.sleep(3000);
+		Signout.click();
 	}
 
 }
