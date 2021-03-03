@@ -57,11 +57,11 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 	       
 	        WebElement fb_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[2]/div[1]/form/div/div[1]/div/input")));
 		Thread.sleep(3000);
-               fb_email.sendKeys("slidetech.qa@gmail.com");
+               fb_email.sendKeys("amw.vrushali@gmail.com");
           Thread.sleep(3000);
                WebElement fb_pass = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[2]/div[1]/form/div/div[2]/div/input")));
 		Thread.sleep(3000);
-               fb_pass.sendKeys("himanshi@123");
+               fb_pass.sendKeys("vrushali@786");
 	       
 	       Thread.sleep(3000);
 	       WebElement fb_login_btn=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div/div[2]/div[1]/form/div/div[3]/label[2]/input")));
