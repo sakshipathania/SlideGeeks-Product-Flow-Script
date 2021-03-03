@@ -71,11 +71,14 @@ public class Email_Sign_In_Paid_User_5 extends SetupClass {
 	public void user_signout_of_website_v() throws Throwable {
 
 		// Log out
-				 WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.signin-page-wrapper.main-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
+				/* WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.signin-page-wrapper.main-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
 				 Thread.sleep(3000);
 				 login_btn.click();
 				 Thread.sleep(3000);
 				 log.info("Hey, I am on Home page Again after Sign out");
-				 Thread.sleep(1000);
+				 Thread.sleep(1000);*/
+		 WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+		Thread.sleep(3000);
+		Signout.click();
 	}
 }
