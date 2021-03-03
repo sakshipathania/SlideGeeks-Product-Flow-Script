@@ -16,8 +16,8 @@ public class Facebook_existing_user_sign_in_6 extends SetupClass {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	@Given("^user is already on Home Page of Geeks Website v$")
-	public void user_is_already_on_Home_Page_of_Geeks_Website_v() throws Throwable {
+	@Given("^user is already on Home Page of Geeks Website vi$")
+	public void user_is_already_on_Home_Page_of_Geeks_Website_vi() throws Throwable {
 		
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
@@ -26,15 +26,15 @@ public class Facebook_existing_user_sign_in_6 extends SetupClass {
 	}
 
 	@Then("^user navigates to fb login page vi$")
-	public void user_navigates_to_login_page_v() throws Throwable {
+	public void user_navigates_to_login_page_vi() throws Throwable {
 		WebElement fb_login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#facebook-signin-btn > i")));
 		 Thread.sleep(3000);
 		 fb_login_btn.click();
 		 Thread.sleep(3000);
 	}
 
-	@Then("^user login to website v$")
-	public void user_login_to_website_v() throws Throwable {
+	@Then("^user login to website vi$")
+	public void user_login_to_website_vi() throws Throwable {
 		
       driver.manage().window().maximize();
 		
@@ -65,13 +65,13 @@ public class Facebook_existing_user_sign_in_6 extends SetupClass {
 	       fb_login_btn.click();
 	}
 
-	@Then("^user is redirected my dashboard page v$")
-	public void user_is_redirected_my_dashboard_page_v() throws Throwable {
+	@Then("^user is redirected my dashboard page vi$")
+	public void user_is_redirected_my_dashboard_page_vi() throws Throwable {
 		log.info("Hey, I am on Pricing");
 	}
 
-	@Then("^user download a paid product v$")
-	public void user_download_a_paid_product_v() throws Throwable {
+	@Then("^user download a paid product vi$")
+	public void user_download_a_paid_product_vi() throws Throwable {
 		
 		driver.get("https://www.slidegeeks.com/business/product/up-skilling-vector-with-progress-in-content-writing-ppt-powerpoint-presentation-styles-professional-pdf");
 		Thread.sleep(5000);
@@ -83,8 +83,8 @@ public class Facebook_existing_user_sign_in_6 extends SetupClass {
 		 
 	    	}
 
-	@Then("^user signout of website v$")
-	public void user_signout_of_website_v() throws Throwable {
+	@Then("^user signout of website vi$")
+	public void user_signout_of_website_vi() throws Throwable {
 
 		// Log out
 				/* WebElement login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("body > div.afterBody.signin-page-wrapper.main-wrapper > header > div > div > nav > div > div.rgth_sechedr > div.navigation_wrapper > div.social_right > div > div.contact.login-option > ul > li:nth-child(2) > a")));
