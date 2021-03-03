@@ -27,7 +27,7 @@ public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 
 	@Then("^user navigates to sign up page i$")
 	public void user_navigates_to_sign_up_page_i() throws Throwable {
-		 WebElement login_signup_btn = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[2]/a")));
+		 WebElement login_signup_btn = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[2]/a"));
 		 Thread.sleep(3000);
 		 login_signup_btn.click();
 		 Thread.sleep(3000);
