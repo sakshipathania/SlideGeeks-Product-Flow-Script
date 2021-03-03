@@ -16,6 +16,7 @@ public class Facebook_existing_user_sign_in_6 extends SetupClass {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
+	
 	@Given("^user is already on Home Page of Geeks Website vi$")
 	public void user_is_already_on_Home_Page_of_Geeks_Website_vi() throws Throwable {
 		
