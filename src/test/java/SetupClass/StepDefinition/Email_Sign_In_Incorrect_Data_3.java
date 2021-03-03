@@ -12,7 +12,7 @@ import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class Email_Sign_In_Incorrect_Data_6 extends SetupClass {
+public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
