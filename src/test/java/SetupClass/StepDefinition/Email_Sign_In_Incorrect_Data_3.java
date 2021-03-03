@@ -17,8 +17,8 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	  JavascriptExecutor js = (JavascriptExecutor) driver;
 	
-	@Given("^user is already on Home Page of Geeks Website vi$")
-	public void user_is_already_on_Home_Page_of_Geeks_Website_vi() throws Throwable {
+	@Given("^user is already on Home Page of Geeks Websiteiii$")
+	public void user_is_already_on_Home_Page_of_Geeks_Website_iii() throws Throwable {
 	   
 		driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 		log.info("It's opening the website URL");
@@ -26,8 +26,8 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 		
 	}
 
-	@Then("^user navigates to login page vi$")
-	public void user_navigates_to_login_page_vi() throws Throwable {
+	@Then("^user navigates to login page iii$")
+	public void user_navigates_to_login_page_iii() throws Throwable {
 		
 		WebElement login_signin_btn = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a")));
 		 Thread.sleep(3000);
@@ -36,8 +36,8 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	    
 	}
 
-	@Then("^user login to website with invalid email and password vi$")
-	public void user_login_to_website_with_invalid_email_and_password_vi() throws Throwable {
+	@Then("^user login to website with invalid email and password iii$")
+	public void user_login_to_website_with_invalid_email_and_password_iii() throws Throwable {
 		
 		WebElement login_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[3]/div/div[2]/div/div/div[2]/div/form/div[1]/input")));
 		 Thread.sleep(3000);
@@ -57,16 +57,16 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	    
 	}
 
-	@Then("^validate the error message vi$")
-	public void validate_the_error_message_vi() throws Throwable {
+	@Then("^validate the error message iii$")
+	public void validate_the_error_message_iii() throws Throwable {
 	    
 		driver.get(AppURL);
 		Thread.sleep(2000);
 		
 	}
 
-	@Then("^user login to website with valid email and password vi$")
-	public void user_login_to_website_with_valid_email_and_password_vi() throws Throwable {
+	@Then("^user login to website with valid email and password iii$")
+	public void user_login_to_website_with_valid_email_and_password_iii() throws Throwable {
 		
 		
 		WebElement login_signin_btn1 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a")));
