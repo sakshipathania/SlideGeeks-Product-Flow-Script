@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.openqa.selenium.JavascriptExecutor;
 import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,7 +15,7 @@ import cucumber.api.java.en.Then;
 public class Email_Sign_Up_Incorrect_Data_1 extends SetupClass{
 	
 	WebDriverWait wait = new WebDriverWait(driver,50);
-	
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	@Given("^user is already on Website Home Page i$")
 	public void user_is_already_on_Website_Home_Page_i() throws Throwable {
 		
