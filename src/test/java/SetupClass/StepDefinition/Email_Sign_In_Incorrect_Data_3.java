@@ -79,7 +79,7 @@ public class Email_Sign_In_Incorrect_Data_3 extends SetupClass {
 	       WebElement old_paid_login_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-account-action > div > div:nth-child(2) > div > form > div.btn-wrapper.login_btn > input")));
 	       old_paid_login_btn1.click();
 		
-		driver.get("https://www.slidegeeks.com/business/product/up-skilling-process-vector-with-progress-chart-ppt-powerpoint-presentation-layouts-summary-pdf");
+		driver.get("https://www.slidegeeks.com/business/product/emerging-marketplace-strategies-growth-ppt-powerpoint-presentation-complete-deck");
 		Thread.sleep(5000);
 		 
 		 WebElement download_btn1 = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
