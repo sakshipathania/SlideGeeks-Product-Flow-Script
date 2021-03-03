@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
@@ -14,6 +15,7 @@ import cucumber.api.java.en.Then;
 public class Email_Sign_In_Paid_User_5 extends SetupClass {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 	@Given("^user is already on Home Page of Geeks Website v$")
 	public void user_is_already_on_Home_Page_of_Geeks_Website_v() throws Throwable {
 		
