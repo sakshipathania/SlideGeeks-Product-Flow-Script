@@ -12,7 +12,7 @@ import SetupClass.SetupClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class Google_exisitng_user_sign_up_9 extends SetupClass {
+public class Google_existing_user_sign_in_9 extends SetupClass {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
