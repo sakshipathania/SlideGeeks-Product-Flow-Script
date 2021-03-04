@@ -16,7 +16,7 @@ public class Google_exisitng_user_sign_up_9 extends SetupClass {
 
 	WebDriverWait wait = new WebDriverWait(driver,30);
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-  \
+  
 	@Given("^user is already on Home Page of Geeks Website ix$")
 	public void user_is_already_on_Home_Page_of_Geeks_Website_ix() throws Throwable {
 		
