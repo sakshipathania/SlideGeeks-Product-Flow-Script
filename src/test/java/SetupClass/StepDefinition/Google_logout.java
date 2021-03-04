@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 	
 
-public class Google_logout extends Set {
+public class Google_logout extends SetupClass {
 
 WebDriverWait wait = new WebDriverWait(driver,50); 
 	
