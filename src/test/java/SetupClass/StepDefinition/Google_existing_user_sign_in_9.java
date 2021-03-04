@@ -33,6 +33,7 @@ public class Google_existing_user_sign_in_9 extends SetupClass {
 		 Thread.sleep(3000);
 		 g_login_btn.click();
 		 Thread.sleep(3000);
+		
 	}
 
 	@Then("^user login to website ix$")
@@ -57,6 +58,21 @@ public class Google_existing_user_sign_in_9 extends SetupClass {
 		  }
 	       Thread.sleep(5000);
 	       
+		
+		try
+		{
+			WebElement another_btn=driver.findElement(By.xpath("//div[text()='Use another account']"));
+			another_btn.click();
+			
+			
+		}
+		catch (Exception e) {
+			// TODO: handle exception
+			
+		
+		}
+		
+		Thread.sleep(3000);
 	        WebElement g_email = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[1]/div/form/span/section/div/div/div[1]/div/div[1]/div/div[1]/input")));
 		Thread.sleep(3000);
                g_email.sendKeys("sakshi.pathania@slidetech.in");
