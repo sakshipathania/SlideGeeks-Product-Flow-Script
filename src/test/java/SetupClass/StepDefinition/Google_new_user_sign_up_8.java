@@ -26,8 +26,8 @@ public class Google_new_user_sign_up_8 extends SetupClass {
 	    
 	}
 
-	@Then("^user navigates to fb login page viii$")
-	public void user_navigates_to_login_page_viii() throws Throwable {
+	@Then("^user navigates to google login page viii$")
+	public void user_navigates_to_google_login_page_viii() throws Throwable {
 		WebElement g_login_btn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#google-signin-btn > i")));
 		 Thread.sleep(3000);
 		 g_login_btn.click();
