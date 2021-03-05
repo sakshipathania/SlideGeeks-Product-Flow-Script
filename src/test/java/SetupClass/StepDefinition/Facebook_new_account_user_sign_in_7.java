@@ -78,7 +78,7 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 		log.info("Hey, I am on Pricing");
 	}
 
-	@Then("^user download a free product vii$")
+	/*@Then("^user download a free product vii$")
 	public void user_download_a_free_product_vii() throws Throwable {
 		
 		driver.get("https://www.slidegeeks.com/free-downloads");
@@ -98,7 +98,7 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 		 download_btn.click();
 		 Thread.sleep(3000);
 		 
-	    	}
+	    	}*/
 
 	@Then("^user signout of website vii$")
 	public void user_signout_of_website_vii() throws Throwable {
