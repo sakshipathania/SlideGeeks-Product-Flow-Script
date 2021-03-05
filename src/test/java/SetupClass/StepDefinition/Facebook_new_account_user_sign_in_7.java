@@ -93,6 +93,8 @@ public class Facebook_new_account_user_sign_in_7 extends SetupClass {
 		Thread.sleep(3000);
 		 WebElement download_btn = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
 		 Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",Download);
+		Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
 		 
