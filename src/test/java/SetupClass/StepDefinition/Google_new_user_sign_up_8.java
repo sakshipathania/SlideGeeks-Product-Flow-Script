@@ -78,6 +78,8 @@ public class Google_new_user_sign_up_8 extends SetupClass {
 		
 		Thread.sleep(3000);
 		  driver.switchTo().window(currentWindow);
+		
+		Thread.sleep(3000);
 	}
 
 	@Then("^user is redirected my dashboard page viii$")
@@ -95,14 +97,14 @@ public class Google_new_user_sign_up_8 extends SetupClass {
 		
 		//WebElement Download = (WebElement)js.executeScript("('a.btn-download')", "");
 		Thread.sleep(3000);
-		//js.executeScript("arguments[0].scrollIntoView();",Download);
-		//Download.click();
-		//Thread.sleep(3000);
-		// WebElement download_btn = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
-		// Thread.sleep(3000);
-		//js.executeScript("arguments[0].scrollIntoView();",download_btn);
-		//Thread.sleep(3000);
-		// download_btn.click();
+		js.executeScript("arguments[0].scrollIntoView();",Download);
+		Download.click();
+		Thread.sleep(3000);
+		WebElement download_btn = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
+		 Thread.sleep(3000);
+		js.executeScript("arguments[0].scrollIntoView();",download_btn);
+		Thread.sleep(3000);
+		 download_btn.click();
 		 Thread.sleep(3000);
 		 
 	    	}
