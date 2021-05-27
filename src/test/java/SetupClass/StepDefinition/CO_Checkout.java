@@ -152,7 +152,7 @@ public class CO_Checkout extends SetupClass {
 		 try {
 		Thread.sleep(1400);
 		// select 2co option
-		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(2) > label > div > p")));
+		WebElement co_btn  =  wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#pg-checkout-billing-payment-form > div > div:nth-child(1) > label")));
 		Thread.sleep(2000);
 	         co_btn.click();
 		Thread.sleep(5000);
@@ -177,50 +177,63 @@ public class CO_Checkout extends SetupClass {
 
 	@Then("^CO page appears and user navigates back to my account (\\d+)CO$")
 	public void CO_page_appears_and_user_navigates_back_to_my_account_CO(int arg1) throws Throwable {
-	    String co_page_title=driver.getTitle();
+	   String stripe_page_title=driver.getTitle();
 		Thread.sleep(3000);
-	    System.out.println("Title of the Page is --> "+co_page_title);
+	    System.out.println("Title of the Page is --> "+stripe_page_title);
 	    
-	    String page_title="2Checkout";
+	    String page_title="https://checkout.stripe.com/";
 	    
-	    if(page_title.equalsIgnoreCase(co_page_title))
+	    if(page_title.equalsIgnoreCase(stripe_page_title))
 	    {
-	    	System.out.println(" user is on the 2checkout page");
-	    	log.info("USER IS ON THE 2CHECKOUT PAGE");
+	    	System.out.println(" user is on the Stripe page");
+	    	log.info("USER IS ON THE STRIPE PAGE");
 	    }
 	    else
 	    {
 	    	System.out.println("user is on the wrong page");
 	    	log.info("USER IS ON THE WRONG PAGE");
-	    }
-		String actualTitle = "$149.99";
-		Thread.sleep(1000);
-		//wait.implictywait(driver);
-		String expectedTitle = "$149.99";
-		Thread.sleep(1000);
-		//wait.implictywait(driver);
-		Assert.assertEquals(expectedTitle, actualTitle);
-		Thread.sleep(2000);
-		js.executeScript("alert('Text $149.99 is present and correct');");
+	    }	
+		
 		Thread.sleep(3000);
-		driver.switchTo().alert().accept();
-		//wait.implictywait(driver);
+		 WebElement Stripe_email = driver.findElement(By.cssSelector("#email"));
+		Thread.sleep(2000);
+		 Stripe_email.sendKeys("slidetech.qa@gmail.com");
+		Thread.sleep(2000);
+		 WebElement Stripe_back = driver.findElement(By.cssSelector("#root > div > div > div.App-Overview > header > div > div > a > div > div > div.Header-backArrowContainer > svg"));
+		Thread.sleep(2000);
+			Stripe_back.click();
 		Thread.sleep(5000);
-	
-		//js.executeScript("window.scrollBy(0,1000)");
+		driver.switchTo().alert().accept();
 		
 	}
 
 	@Then("^user signout the account (\\d+)CO$")
 	public void user_signout_the_account_CO(int arg1) throws Throwable {
 		Thread.sleep(3000);
-	    driver.get("https://www.slidegeeks.com/component/pago/checkout");
-		Thread.sleep(2000);
-		
-
-       WebElement Signout = driver.findElement(By.xpath("//a[@href ='/logout']"));
+	  //  driver.get("https://www.slidegeeks.com/component/pago/checkout");
+		//Thread.sleep(2000);
+	WebElement Account = driver.findElement(By.xpath("/html/body/div[1]/header/div/div/nav/div/div[2]/div[2]/div[2]/div/div[2]/ul/li[1]/a"));
 		Thread.sleep(3000);
-		Signout.click();
+		Account.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Account = driver.findElement(By.xpath("/html/body/div[1]/div[3]/div/div/div/div/div[2]/div/ul/li[6]/a"));
+		Thread.sleep(3000);
+			js.executeScript("arguments[0].scrollIntoView();",Delete_Account);	
+		Thread.sleep(3000);
+		Delete_Account.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Account_reason = driver.findElement(By.cssSelector("#only-free-download-product"));
+		Thread.sleep(3000);
+		Delete_Account_reason.click();
+                 Thread.sleep(3000);
+	WebElement Delete_Profile = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div/div[3]/button[1]"));
+		Thread.sleep(3000);
+		Delete_Profile.click();
+                 Thread.sleep(3000);
+	WebElement No_Delete = driver.findElement(By.xpath("/html/body/div[1]/div[5]/div/div/div[3]/button[2]"));
+		Thread.sleep(3000);
+		No_Delete.click();
+                 Thread.sleep(3000);
 	
 }
 }
