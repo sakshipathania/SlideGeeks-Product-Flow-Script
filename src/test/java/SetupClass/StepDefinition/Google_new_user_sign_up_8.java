@@ -61,7 +61,7 @@ public class Google_new_user_sign_up_8 extends SetupClass {
                g_email.sendKeys("slidetech.qa@gmail.com");
           Thread.sleep(3000);
     
-    WebElement g_login_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/div[2]")));
+    WebElement g_login_btn1=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#identifierNext > div > button > span")));
 		Thread.sleep(3000);
 	       g_login_btn1.click();
 		
@@ -72,7 +72,7 @@ public class Google_new_user_sign_up_8 extends SetupClass {
                g_pass.sendKeys("Himanshi@123");
 	       
 	       Thread.sleep(3000);
-	       WebElement g_login_btn2=wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button/div[2]")));
+	       WebElement g_login_btn2=wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#passwordNext > div > button > span")));
 		Thread.sleep(3000);
 	       g_login_btn2.click();
 		
