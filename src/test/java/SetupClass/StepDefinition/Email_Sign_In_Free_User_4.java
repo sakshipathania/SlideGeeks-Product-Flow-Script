@@ -24,7 +24,7 @@ public class Email_Sign_In_Free_User_4 extends SetupClass {
 		
 		driver.get("https://www.slidegeeks.com/business/product/skills-free-powerpoint-slide");
 		Thread.sleep(3000);
-		 WebElement download_btn = driver.findElement(By.xpath("//*[@class=\"btn-download pg-button pg-addtocart pg-green-background-btn\"]"));
+		 WebElement download_btn = driver.findElement(By.xpath("//a[@href ='https://www.slidegeeks.com/subscriptions']"));
 		 Thread.sleep(3000);
 		 download_btn.click();
 		 Thread.sleep(3000);
