@@ -59,10 +59,10 @@ public class Email_Sign_In_Free_User_4 extends SetupClass {
 	public void user_is_redirected_to_Product_page_iv() throws Throwable {
 		//log.info("Hey, I am on Pricing Page");
 		 Thread.sleep(3000);
-		 WebElement download_btn = driver.findElement(By.xpath("//a[@href ='https://www.slidegeeks.com/subscriptions']"));
+		// WebElement download_btn = driver.findElement(By.xpath("//a[@href ='https://www.slidegeeks.com/subscriptions']"));
 		 Thread.sleep(3000);
-		 download_btn.click();
-		 Thread.sleep(3000);
+		// download_btn.click();
+		// Thread.sleep(3000);
 	}
 
 	
